@@ -1,0 +1,7 @@
+FROM centos
+MAINTAINER Pusp Bhatt <pusprajbhatt2@gmail.com>
+WORKDIR /var/tmp
+RUN yum -y update
+COPY /root/environments/python.py /var/tmp/python.py
+CMD [ "python /var/tmp/python.py" ]
+
